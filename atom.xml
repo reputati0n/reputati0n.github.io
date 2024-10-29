@@ -6,7 +6,7 @@
   <link href="https://www.cyblogs.cn/atom.xml" rel="self"/>
   
   <link href="https://www.cyblogs.cn/"/>
-  <updated>2024-10-28T08:30:23.980Z</updated>
+  <updated>2024-10-29T03:10:29.858Z</updated>
   <id>https://www.cyblogs.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024 网鼎杯资格赛 WP - 白虎赛道</title>
+    <link href="https://www.cyblogs.cn/2024/10/29/ctf-wp-wangding/"/>
+    <id>https://www.cyblogs.cn/2024/10/29/ctf-wp-wangding/</id>
+    <published>2024-10-29T03:06:53.000Z</published>
+    <updated>2024-10-29T03:10:29.858Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;签到题&quot;&gt;&lt;a href=&quot;#签到题&quot; class=&quot;headerlink&quot; title=&quot;签到题&quot;&gt;&lt;/a&gt;签到题&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    <category term="CTF" scheme="https://www.cyblogs.cn/categories/CTF/"/>
+    
+    
+    <category term="网鼎杯" scheme="https://www.cyblogs.cn/tags/%E7%BD%91%E9%BC%8E%E6%9D%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>第六届集团赛内部选拔赛题解</title>
