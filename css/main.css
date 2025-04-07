@@ -43,7 +43,7 @@ body {
   min-width: 320px;
   color: var(--sea-color-text-1);
   background-color: var(--sea-color-main-bg);
-  font-family: var(--sea-font-family-code);
+  font-family: var(--sea-font-family);
 
   /* 解决ios下代码块字体样式偏大问题 */
   text-size-adjust: 100%;
@@ -152,9 +152,8 @@ html[theme=dark] {
 
 /* 字体 */
 :root {
-  --sea-font-family-code: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco,
+  --sea-font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco,
     Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --sea-font-family-microsoft: "Microsoft YaHei";
 }
 
 /* 阴影 */
@@ -166,7 +165,7 @@ code,
 pre {
   color: var(--sea-code-color);
   background: 0 0;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: var(--sea-font-family);
   font-size: 0.875rem;
   text-align: left;
   white-space: pre;
@@ -429,6 +428,15 @@ html[theme=dark] .token.inserted {
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.sea-menu-link{
+  transition: color .3s ease;
+}
+
+.sea-menu-link:hover,
+.sea-menu-link.active {
+  color: var(--sea-color-primary);
+}
 #sea-footer-container {
   padding: 2rem 0;
   text-align: center;
@@ -464,6 +472,14 @@ html[theme=dark] .token.inserted {
 .sea-footer-theme-by .theme:hover {
   color: var(--sea-color-primary);
 }
+.sea-index-title {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: .5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--sea-color-divider);
+}
+
 .sea-post-item {
   position: relative;
   padding: 1rem 0;
@@ -520,6 +536,28 @@ html[theme=dark] .token.inserted {
   width: .875rem;
   height: .875rem;
 }
+
+.sea-index-all-posts {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sea-index-all-posts .sea-svg-icon {
+  width: .875rem;
+  height: .875rem;
+}
+
+.sea-index-all-posts__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1;
+}
+
+.sea-index-all-posts:hover .sea-index-all-posts__link {
+  color: var(--sea-color-primary);
+}
 .sea-archive-total {
   font-size: 1.375rem;
   margin-bottom: 1.5rem;
@@ -553,6 +591,7 @@ html[theme=dark] .token.inserted {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--sea-color-text-1);
+  transition: color 0.3s ease;
 }
 
 .sea-archive-list-item-date {
@@ -588,6 +627,12 @@ html[theme=dark] .token.inserted {
   flex-wrap: wrap;
   align-items: center;
   gap: .5rem;
+  transition: color 0.3s ease;
+}
+
+.sea-post-tags:hover,
+.sea-post-categories:hover  {
+  color: var(--sea-color-primary);
 }
 
 .sea-post-meta__center {
@@ -667,6 +712,89 @@ html[theme=dark] .token.inserted {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.sea-works-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.sea-works-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--sea-color-border-1);
+  border-radius: 10px;
+}
+
+.sea-works-cover {
+  /* 宽高比20:9 */
+  width: 100%;
+  padding-top: 45%;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid var(--sea-color-border-1);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.sea-works-cover img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: transform 0.3s ease;
+}
+
+.sea-works-card:hover img {
+  transform: scale(1.1);
+}
+
+.sea-works-content {
+  padding: 0.625rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.sea-works-card .sea-works-title {
+  font-size: 1rem;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sea-works-card:hover .sea-works-title {
+  color: var(--sea-color-primary);
+}
+
+.sea-works-desc {
+  font-size: 0.875rem;
+  color: var(--sea-color-gray);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sea-works-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.sea-works-tag {
+  padding: 2px 5px;
+  border: 1px solid var(--sea-color-border-1);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: var(--sea-color-gray);
 }
 .sea-prev-next-wrapper {
   border-top: 1px solid var(--sea-color-divider);
@@ -831,7 +959,7 @@ html[theme=dark] .token.inserted {
   font-weight: 500;
   color: var(--sea-color-primary);
   text-decoration-style: dotted;
-  transition: color 0.25s;
+  transition: color 0.3s ease;
 }
 
 .sea-doc a:hover {
@@ -972,9 +1100,39 @@ html[theme=dark] .token.inserted {
 .sea-page-categories__item .name {
   margin: 0 .5rem;
 }
+#sea-hero-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0 4px;
+}
+
+.sea-hero-info__left {
+  flex: 1;
+}
+
+.sea-hero-info__right {
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.sea-hero-info__avatar {
+  width: 100%;
+}
+
+.sea-hero-name {
+  font-size: 1.8rem;
+}
+
 .sea-hero-info__intro {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5rem;
+  color: var(--sea-color-text-2);
 }
 
 .sea-hero-info__link-item {
@@ -984,6 +1142,8 @@ html[theme=dark] .token.inserted {
   display: inline-block;
   margin-bottom: 1rem;
   transition: all .3s;
+  color: var(--sea-color-text-2);
+  font-size: 0.875rem;
 }
 
 .sea-hero-info__link-item:hover {
@@ -1077,6 +1237,10 @@ html[theme=dark] .token.inserted {
     position: absolute;
     top: 2.5rem;
     left: 1.2rem;
+  }
+
+  .sea-hero-info__right {
+    display: none;
   }
 
   .sea-prev-next-wrapper .prev,
