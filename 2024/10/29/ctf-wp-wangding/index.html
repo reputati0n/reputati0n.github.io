@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://reputati0n.github.io/images/ctf-wp-wd/QQ_1730350084994_h1Hp_xnZWD.png">
 <meta property="og:image" content="https://reputati0n.github.io/images/ctf-wp-wd/QQ_1730355769116_JvkLZ2x-nT.png">
 <meta property="article:published_time" content="2024-10-29T03:06:53.000Z">
-<meta property="article:modified_time" content="2024-11-01T02:19:04.982Z">
+<meta property="article:modified_time" content="2025-04-17T01:33:58.739Z">
 <meta property="article:author" content="reputati0n">
 <meta property="article:tag" content="网鼎杯">
 <meta name="twitter:card" content="summary">
@@ -118,7 +118,7 @@
       
         <div class="sea-article-catalog">
           <h2>目录</h2>
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Crypto01"><span class="toc-number">1.</span> <span class="toc-text">Crypto01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Crypto02"><span class="toc-number">2.</span> <span class="toc-text">Crypto02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc01"><span class="toc-number">3.</span> <span class="toc-text">Misc01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc02"><span class="toc-number">4.</span> <span class="toc-text">Misc02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc02-1"><span class="toc-number">5.</span> <span class="toc-text">Misc02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc04"><span class="toc-number">6.</span> <span class="toc-text">Misc04</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pwn1"><span class="toc-number">7.</span> <span class="toc-text">Pwn1</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Crypto01"><span class="toc-number">1.</span> <span class="toc-text">Crypto01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Crypto02"><span class="toc-number">2.</span> <span class="toc-text">Crypto02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc01"><span class="toc-number">3.</span> <span class="toc-text">Misc01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc02"><span class="toc-number">4.</span> <span class="toc-text">Misc02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc04"><span class="toc-number">5.</span> <span class="toc-text">Misc04</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pwn1"><span class="toc-number">6.</span> <span class="toc-text">Pwn1</span></a></li></ol>
         </div>
       
     
@@ -277,7 +277,7 @@ plaintext <span class="token operator">=</span> decrypt<span class="token punctu
 <p>拼接 teid 的值即可获取 flag</p>
 <p><img src="/../images/ctf-wp-wd/QQ_1730364472092_x5Bm933G6O.png"></p>
 <p><img src="/../images/ctf-wp-wd/QQ_1730364507118_ZrM1rNR7zo.png"></p>
-<h2 id="Misc02"><a href="#Misc02" class="headerlink" title="Misc02"></a>Misc02</h2><h2 id="Misc02-1"><a href="#Misc02-1" class="headerlink" title="Misc02"></a>Misc02</h2><p>gtp 数据包的 upd 负载中，存在加密字节，加密方式为 AES-ECB，所以通过提取 UDP 负载的特定部分并将其转换为整数，作为密钥，将负载的其余部分转换为字节，然后进行解密</p>
+<h2 id="Misc02"><a href="#Misc02" class="headerlink" title="Misc02"></a>Misc02</h2><p>gtp 数据包的 upd 负载中，存在加密字节，加密方式为 AES-ECB，所以通过提取 UDP 负载的特定部分并将其转换为整数，作为密钥，将负载的其余部分转换为字节，然后进行解密</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> cryptography<span class="token punctuation">.</span>hazmat<span class="token punctuation">.</span>primitives<span class="token punctuation">.</span>ciphers <span class="token keyword">import</span> Cipher<span class="token punctuation">,</span> algorithms<span class="token punctuation">,</span> modes
 <span class="token keyword">from</span> cryptography<span class="token punctuation">.</span>hazmat<span class="token punctuation">.</span>backends <span class="token keyword">import</span> default_backend
 <span class="token keyword">import</span> struct
