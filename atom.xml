@@ -6,7 +6,7 @@
   <link href="https://reputati0n.github.io/atom.xml" rel="self"/>
   
   <link href="https://reputati0n.github.io/"/>
-  <updated>2025-05-22T08:22:56.654Z</updated>
+  <updated>2025-06-10T02:20:25.491Z</updated>
   <id>https://reputati0n.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://reputati0n.github.io/2025/05/22/some-ctf-misc-note/"/>
     <id>https://reputati0n.github.io/2025/05/22/some-ctf-misc-note/</id>
     <published>2025-05-22T08:02:27.000Z</published>
-    <updated>2025-05-22T08:22:56.654Z</updated>
+    <updated>2025-06-10T02:20:25.491Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一大碗冰粉"><a href="#一大碗冰粉" class="headerlink" title="一大碗冰粉"></a>一大碗冰粉</h2><p><img src="/../images/ctf-some-misc/488ac735477f5cccc19e526db83a680b.png" alt="题目截图"></p><p>拿到一个内存镜像，很明显取证题目，使用 LovelyMem 分析之</p><p><img src="/../images/ctf-some-misc/sdc7s8dfn123n7csdf.png" alt="LovelyMem 分析"></p><p>拿到两个文件，一个 hint 一个 secret.zip，打开 hint 发现内容为：doyouknowplaintextattack</p><p><img src="/../images/ctf-some-misc/2bnsmqisdj2mma11.png" alt="hint"></p><p>很明显是 zip 已知明文攻击，攻击之，最后得到解密完的文件：</p><p><img src="/../images/ctf-some-misc/3iadmasd423432.png" alt="search 文件"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="一大碗冰粉"><a href="#一大碗冰粉" class="headerlink" title="一大碗冰粉"></a>一大碗冰粉</h2><p><img src="/../images/ctf-some-misc/488ac735477f5cccc19e526db83a680b.png" alt="题目截图"></p><p>拿到一个内存镜像，很明显取证题目，使用 LovelyMem 分析之</p><p><img src="/../images/ctf-some-misc/sdc7s8dfn123n7csdf.png" alt="LovelyMem 分析"></p><p>拿到两个文件，一个 hint 一个 secret.zip，打开 hint 发现内容为：doyouknowplaintextattack</p><p><img src="/../images/ctf-some-misc/2bnsmqisdj2mma11.png" alt="hint"></p><p>很明显是 zip 已知明文攻击，攻击之，最后得到解密完的文件：</p><p><img src="/../images/ctf-some-misc/5asdasda12123nfnmsf.png" alt="恢复成功"></p><p><img src="/../images/ctf-some-misc/3iadmasd423432.png" alt="search 文件"></p>]]></content>
     
     
       
